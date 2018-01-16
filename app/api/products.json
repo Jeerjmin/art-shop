@@ -1,0 +1,244 @@
+[
+	{
+    	"id": "1",
+        "title": "Catia D'Amore",
+    	"subtitle": "Source",
+    	"price": "69500",
+    	"color": "red orange",
+        "style": "modern minimalism",
+        "size": "50x70",
+    	"image": "1.jpg"
+	},
+	{
+    	"id": "2",
+        "title": "Michael Bruns",
+    	"subtitle": "ohne Titel",
+        "color": "green",
+        "size": "25x35",
+        "style": "modern minimalism",
+    	"price": "25000",
+    	"image": "2.jpg"
+	},
+	{
+        "id": "3",
+        "title": "JIBON",
+        "subtitle": "Kampos",
+        "size": "40x60",
+        "color": "blue",
+        "style": "modern minimalism",
+        "price": "68000",
+        "image": "3.jpg"
+	},
+	{
+        "id": "4",
+        "title": "Erich Keller",
+        "subtitle": "2 1 l",
+        "size": "40x40",
+        "color": "blue",
+        "style": "abstract",
+        "price": "25000",
+        "image": "4.jpg"
+	},
+	{
+    	"id": "5",
+        "title": "Barbara Cervio",
+    	"subtitle": "foresta feconda",
+        "size": "100x150",
+        "color": "green",
+        "style": "abstract",
+    	"price": "68000",
+    	"image": "5.jpg"
+	},
+	{
+        "id": "6",
+        "title": "Milorv",
+        "subtitle": "Terre de Provence",
+        "size": "60x73",
+        "color": "green, brown",
+        "style": "expressionism nature",
+        "price": "35000",
+        "image": "6.jpg"
+	},
+	{
+        "id": "7",
+        "title": "Christina Hadjineofytou",
+        "subtitle": "self-portrait",
+        "size": "66x49,5",
+        "color": "brown",
+        "style": "Portrait",
+        "price": "171000",
+        "image": "7.jpg"
+	},
+	{
+    	"id": "8",
+        "title": "Angeles Muntalt Boltana",
+        "subtitle": "271-40x40-jpg",
+        "size": "40x40",
+        "color": "green",
+        "style": "abstract",
+        "price": "17000",
+        "image": "8.jpg"
+	},
+	{
+        "id": "9",
+        "title": "Stoyan Nikolov-Zikov",
+        "subtitle": "When you burn",
+        "size": "55x65",
+        "color": "orange red",
+        "style": "abstract modern concept",
+        "price": "82000",
+        "image": "9.jpg"
+	},
+	{
+        "id": "10",
+        "title": "Jesus Movellan",
+        "subtitle": "En la noche",
+        "size": "146x97,2",
+        "color": "yellow green red",
+        "style": "abstract expressionism",
+        "price": "182000",
+        "image": "10.jpg"
+	},
+	{
+        "id": "11",
+        "title": "Claudie Saxe",
+        "subtitle": "Petrifie",
+        "size": "80x120",
+        "color": "red black",
+        "style": "abstract",
+        "price": "136000",
+        "image": "11.jpg"
+	},
+	{
+    	"id": "12",
+        "title": "Jean Christophe Le Du",
+        "subtitle": "Cri sur fond noir",
+        "size": "60x150",
+        "color": "yellow black",
+        "style": "concept modern",
+        "price": "755781",
+        "image": "12.jpg"
+	},
+	{
+        "id": "13",
+        "title": "Mohsen Modiri",
+        "subtitle": "Populace and Girls",
+        "size": "70x50",
+        "color": "red grey yellow white",
+        "style": "abstract modern",
+        "price": "310000",
+        "image": "13.jpg"
+	},
+	{
+        "id": "14",
+        "title": "Wankocubart",
+        "subtitle": "New liberty two",
+        "size": "130x170",
+        "color": "blue yellow",
+        "style": "futurism",
+        "price": "185000",
+        "image": "14.jpg"
+	},
+	{
+        "id": "15",
+        "title": "Marie H Tremblay",
+        "subtitle": "Iseeyou.png",
+        "size": "130x170",
+        "color": "red blue",
+        "style": "abstract",
+        "price": "85000",
+        "image": "15.jpg"
+	},
+	{
+        "id": "16",
+        "title": "Hanen HB",
+        "subtitle": "extasea",
+        "size": "30x30",
+        "color": "green blue",
+        "style": "abstract",
+        "price": "35000",
+        "image": "16.jpg"
+	},
+	{
+        "id": "17",
+        "title": "Hanen HB",
+        "subtitle": "Energizing",
+        "size": "100x80",
+        "color": "red",
+        "style": "abstract",
+        "price": "92000",
+        "image": "17.jpg"
+	},
+	{
+        "id": "18",
+        "title": "Bechamo",
+        "subtitle": "Incendie sur le Lac de la Montagne Noire",
+        "size": "150x120",
+        "color": "red green yellow white",
+        "style": "abstract",
+        "price": "112000",
+        "image": "18.jpg"
+	},
+	{
+        "id": "19",
+        "title": "Eric Munsch",
+        "subtitle": "80x60",
+        "size": "80x60",
+        "color": "grey white",
+        "style": "abstract",
+        "price": "42000",
+        "image": "19.jpg"
+	},
+	{
+        "id": "20",
+        "title": "Erik Desprez",
+        "subtitle": "semences-pour-une-estampe-japonaise",
+        "size": "60x84",
+        "color": "brown white",
+        "style": "abstract",
+        "price": "72000",
+        "image": "20.jpg"
+	},
+	{
+        "id": "21",
+        "title": "Jack Cash Jr",
+        "subtitle": "Empy Street",
+        "size": "22x26",
+        "color": "blue brown",
+        "style": "Impressionism nature",
+        "price": "52000",
+        "image": "21.jpg"
+	},
+	{
+        "id": "22",
+        "title": "Sebastian Konrad Sleczka",
+        "subtitle": "Gloves II",
+        "size": "100x70",
+        "color": "grey red",
+        "style": "realism",
+        "price": "68000",
+        "image": "22.jpg"
+	},
+	{
+        "id": "23",
+        "title": "Zhanna Kondratenko",
+        "subtitle": "A fire deep inside your eyes",
+        "size": "90x90",
+        "color": "red",
+        "style": "modern abstract",
+        "price": "46700",
+        "image": "23.jpg"
+	},
+	{
+        "id": "24",
+        "title": "Andrej Barov",
+        "subtitle": "DEVELOPMENT",
+        "size": "70x60",
+        "color": "red yellow blue",
+        "style": "expressionism abstract",
+        "price": "89300",
+        "image": "24.jpg"
+	}
+
+
+]
