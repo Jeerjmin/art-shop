@@ -61,7 +61,26 @@ ProductsListContainer.propTypes = {
 
 const mapStateToProps = state => (
     {
-        products: state.products.filter(product => product.title.includes(state.filter)),
+        products:
+            (state.products.filter( product =>
+              ( product.title.toUpperCase().includes( state.filter.toUpperCase() )
+              ||
+              product.subtitle.toUpperCase().includes( state.filter.toUpperCase() ))
+              && (product.style.includes( state.style ) )
+              && (product.color.includes(state.colorRed ))
+              && (product.color.includes(state.colorBlue ))
+              && (product.color.includes(state.colorGreen ))
+              && (product.color.includes(state.colorYellow ))
+              && (product.color.includes(state.colorBrown ))
+            )),
+
+        // state.products.filter( function(product) {if (state.color==true) {
+        //                                                        return product.color.includes("red")
+        //                                                        console.log("test",state.color)
+        //                                                      }
+        //                                                    else
+        //                                                        return product}  ),
+
         pagination: state.pagination,
         productsInCart: state.cart.products,
         productsInWishlist: state.wishlist.products

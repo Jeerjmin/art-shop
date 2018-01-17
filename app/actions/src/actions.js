@@ -1,3 +1,35 @@
+
+export const FindRed = (value) => ({
+  type:"FIND_RED",
+  payload:value
+});
+
+export const FindBlue = (value) => ({
+  type:"FIND_BLUE",
+  payload: value
+});
+
+export const FindGreen = (value) => ({
+  type:"FIND_GREEN",
+  payload: value
+});
+
+export const FindYellow = (value) => ({
+  type:"FIND_YELLOW",
+  payload: value
+});
+
+export const FindBrown = (value) => ({
+  type:"FIND_BROWN",
+  payload: value
+});
+
+
+export const FindStyle = (value) => ({
+  type:"FIND_STYLE",
+  payload:value
+});
+
 export const onFind = (value) => ({
   type:'FIND',
   payload:value

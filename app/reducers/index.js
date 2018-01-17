@@ -3,13 +3,20 @@ import { ProductsReducer } from './products';
 import { CartReducer } from './cart';
 import { WishlistReducer } from './wishlist';
 import { PaginationReducer } from './pagination';
-import { FilterReducer } from './filter'
-
+import { FilterReducer } from './filter';
+import { StyleReducer } from './style';
+import { ColorRedReducer, ColorBlueReducer, ColorGreenReducer, ColorYellowReducer, ColorBrownReducer } from './color'
 
 export const reducers = combineReducers({
     products: ProductsReducer,
     cart: CartReducer,
     pagination: PaginationReducer,
     wishlist: WishlistReducer,
-    filter: FilterReducer
+    filter: FilterReducer,
+    style: StyleReducer,
+    colorRed: ColorRedReducer,
+    colorBlue: ColorBlueReducer,
+    colorGreen: ColorGreenReducer,
+    colorYellow: ColorYellowReducer,
+    colorBrown: ColorBrownReducer
 });

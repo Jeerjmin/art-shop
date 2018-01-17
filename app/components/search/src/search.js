@@ -32,6 +32,7 @@ export class SearchContent extends React.Component {
     this.setState({
       value: event.target.value
     })
+    this.props.onFind(event.target.value)
   }
 
   handleClick() {
@@ -49,8 +50,6 @@ export class SearchContent extends React.Component {
           hintText="Search"
           style={{ marginTop: '30px'}}
           />
-
-          <FlatButton label="Go" onClick={this.handleClick}/>
         </div>
       )
     }

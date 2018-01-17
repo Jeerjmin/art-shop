@@ -1,0 +1,50 @@
+.col-fil {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.col-fil > h5 {
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+
+
+.buttonf {
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 6px;
+  border-radius: 50%;
+
+}
+.buttonf1 {
+
+  background: red;
+
+}
+
+.buttonf2 {
+
+  background: blue;
+
+}
+.buttonf3 {
+
+  background: #4CAF50;
+
+}
+.buttonf4 {
+
+  background: yellow;
+
+}
+.buttonf5 {
+
+  background: brown;
+
+}
