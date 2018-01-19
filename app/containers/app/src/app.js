@@ -11,6 +11,8 @@ import { Footer }       from '../../../components/footer';
 import configuration    from '../../../config.json';
 
 
+
+
 export class App extends React.Component {
 
 
@@ -27,6 +29,7 @@ export class App extends React.Component {
                     </div>
                 </main>
                 <Footer />
+
             </div>
         );
     }

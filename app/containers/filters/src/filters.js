@@ -10,7 +10,8 @@ import MenuItem from 'material-ui/MenuItem';
 import { FindStyle } from '../../../actions';
 
 import { Search } from '../../../components/search';
-import { ColorFilter } from '../../../components/color-filter'
+import { ColorFilter } from '../../../components/color-filter';
+import { PriceFilter } from '../../../components/price'
 import './filters.scss';
 
 
@@ -57,7 +58,7 @@ export class FilterContainer extends React.Component {
               <MenuItem value={9} primaryText="Реализм" />
               <MenuItem value={10} primaryText="Портрет" />
             </DropDownMenu>
-
+            <PriceFilter/>
           </div>
           <div>
           <ColorFilter />

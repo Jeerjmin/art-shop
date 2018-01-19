@@ -124,7 +124,7 @@ export class ColorFilterContainer extends React.Component {
 
       return(
         <div className="col-fil">
-          <h5>Основной цвет</h5>
+          <h5>Выберите цвета в картине</h5>
           <div>
             <button className="buttonf buttonf1" value={this.state.value1} onClick={this.handleClick1} style={style1}>   </button>
             <button className="buttonf buttonf2" value={this.state.value2} onClick={this.handleClick2} style={style2}>   </button>

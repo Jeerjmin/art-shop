@@ -1,0 +1,25 @@
+
+.Modal {
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  left: 10%;
+  right: 5%;
+  width: 80%;
+  height: 70%;
+    background-color: rgba(115,115,115,0.95);
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
+
+.product-details__image {
+  width: 500px;
+  height: 500px;
+}

@@ -15,24 +15,19 @@ import './header.scss';
  * @extends {React.Component}
  */
 export class HeaderContainer extends React.Component {
-    /**
-     * Renders all the header components
-     *
-     * @name render
-     * @function
-     * @returns {ReactElement} markup
-     */
+
     render() {
         return (
             <header className="header container">
                 <h1 className="page-title">{this.props.title}</h1>
                 <aside className="header-bag">
-                    <div className="header-bag__item header-bag__count">
+                    <div className="header-bag__item header-bag__count" onClick>
                         <div className="header-bag__price">
                             £{this.props.cart.total}
                         </div>
                         <SVGInline svg={bagIcon} />
                         <span className="bag__item-counter">{this.props.cart.products.length}</span>
+
                     </div>
                     <div className="header-bag__item header-bag__wishlist-count">
                         <SVGInline svg={wishlistIcon} />

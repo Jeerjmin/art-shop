@@ -22,6 +22,10 @@ class ProductsListContainer extends React.Component {
         return productsInWishlist.includes(productId);
     }
 
+    doSomething(e){
+      console.log('sumbit work it')
+    }
+
 
     createListOfProducts(selectedPage, products) {
         const maxRange = selectedPage * configuration.productsPerPage;
@@ -29,8 +33,8 @@ class ProductsListContainer extends React.Component {
         return products
             .filter((_, index) => index < maxRange && index >= (maxRange - 6))
             .map(product => (
-                <li key={product.id} className="product-list__item">
-                    <Product product={product}
+                <li key={product.id} onClick={this.doSomething} className="product-list__item">
+                    <Product  product={product}
                         isProductInCart={this.isProductInCart(product.id, this.props.productsInCart)}
                         isProductInWishlist={this.isProductInWishlist(product.id, this.props.productsInWishlist)}
                         onAddToCartClick={this.props.addToCart}

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import { AddToCart } from '../../add-to-cart';
 import { ProductPrice } from '../../product-price';
+import { Details } from '../../details'
+
 
 /**
  * Product Details component
@@ -33,7 +35,12 @@ export class ProductDetails extends React.Component {
                     onAddToCartClick={this.props.onAddToCartClick}
                     isProductInCart={this.props.isProductInCart}
                 />
+              <Details product={this.props.product}
+                       onAddToCartClick={this.props.onAddToCartClick}
+                       isProductInCart={this.props.isProductInCart}
+                />
             </div>
+
         );
     }
 }
