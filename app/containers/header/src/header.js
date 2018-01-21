@@ -1,6 +1,9 @@
 import React       from 'react';
 import PropTypes   from 'prop-types';
 import { connect } from 'react-redux';
+import ReactModal from 'react-modal';
+
+
 
 import SVGInline from 'react-svg-inline';
 import bagIcon from '../../../assets/svg/bag.svg';
@@ -15,20 +18,49 @@ import './header.scss';
  * @extends {React.Component}
  */
 export class HeaderContainer extends React.Component {
+    constructor (props) {
+      super(props);
+      this.state = {
+        showModal: false
+      };
+
+      this.handleOpenModal = this.handleOpenModal.bind(this);
+      this.handleCloseModal = this.handleCloseModal.bind(this);
+    }
+
+    handleOpenModal () {
+      this.setState({ showModal: true });
+    }
+
+    handleCloseModal () {
+      this.setState({ showModal: false });
+    }
 
     render() {
         return (
             <header className="header container">
                 <h1 className="page-title">{this.props.title}</h1>
                 <aside className="header-bag">
-                    <div className="header-bag__item header-bag__count">
+                    <div onClick={this.handleOpenModal} className="header-bag__item header-bag__count">
                         <div className="header-bag__price">
                             £{this.props.cart.total}
                         </div>
                         <SVGInline svg={bagIcon} />
-                        <span className="bag__item-counter">{this.props.cart.products.length}</span>
 
+                        <span>{console.log(this.props.cart.products)}</span>
                     </div>
+
+                    <ReactModal
+                        isOpen={this.state.showModal}
+                        contentLabel="Minimal Modal Example"
+                        onRequestClose={this.handleCloseModal}
+                        className="Modal"
+                        overlayClassName="Overlay"
+                    >
+
+                    <button onClick={this.handleCloseModal}>Close Modal</button>
+                  </ReactModal>
+
                     <div className="header-bag__item header-bag__wishlist-count">
                         <SVGInline svg={wishlistIcon} />
                         <span className="bag__item-counter">{this.props.wishlist.products.length}</span>
