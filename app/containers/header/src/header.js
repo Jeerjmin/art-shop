@@ -8,15 +8,14 @@ import ReactModal from 'react-modal';
 import SVGInline from 'react-svg-inline';
 import bagIcon from '../../../assets/svg/bag.svg';
 import wishlistIcon from '../../../assets/svg/wishlist.svg';
+
+import {CartListContainer} from '../../../components/cart-list'
+
+
 import './header.scss';
 
-/**
- * Header class which renders the top bar of the application
- * @name HeaderContainer
- * @function
- *
- * @extends {React.Component}
- */
+
+
 export class HeaderContainer extends React.Component {
     constructor (props) {
       super(props);
@@ -30,6 +29,7 @@ export class HeaderContainer extends React.Component {
 
     handleOpenModal () {
       this.setState({ showModal: true });
+      console.log('cart',this.props.cart.products)
     }
 
     handleCloseModal () {
@@ -46,7 +46,7 @@ export class HeaderContainer extends React.Component {
                             £{this.props.cart.total}
                         </div>
                         <SVGInline svg={bagIcon} />
-
+                          <span className="bag__item-counter">{this.props.cart.products.length}</span>
                         <span>{console.log(this.props.cart.products)}</span>
                     </div>
 
@@ -58,7 +58,9 @@ export class HeaderContainer extends React.Component {
                         overlayClassName="Overlay"
                     >
 
-                    <button onClick={this.handleCloseModal}>Close Modal</button>
+                    <CartListContainer
+                      />
+
                   </ReactModal>
 
                     <div className="header-bag__item header-bag__wishlist-count">
@@ -78,27 +80,14 @@ HeaderContainer.propTypes = {
     wishlist: PropTypes.object.isRequired
 };
 
-/**
- * maps the necessary state to the props object
- *
- * @name mapStateToProps
- * @function
- * @param {Object} state the state of the application
- * @returns {Object} the props properties which maps to the state
- */
+
 const mapStateToProps = state => (
     {
         cart: state.cart,
-        wishlist: state.wishlist
+        wishlist: state.wishlist,
+        products: state.products
     }
 );
 
-/**
- * connect the new props mapped with the state and bind them to the component
- *
- * @name connect
- * @function
- * @param {function} mapStateToProps function which maps the state to the new props properties
- * @returns {function} the class component
- */
+
 export const Header = connect(mapStateToProps)(HeaderContainer);

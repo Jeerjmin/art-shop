@@ -17,7 +17,7 @@ const defaultState = {
  * @returns {Object} new state
  */
 const addToCart = (state, action) => {
-    const index = state.products.findIndex((id) => id === action.payload.id);
+    const index = parseInt(state.products.findIndex((id) => id === action.payload.id),10);
     const price = action.payload.priceDiscounted ? action.payload.priceDiscounted : action.payload.price;
 
     if (index === -1) {
