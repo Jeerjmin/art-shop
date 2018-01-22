@@ -2,11 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+Array.prototype.remove = function(from, to) {
+  var rest = this.slice((to || from) + 1 || this.length);
+  this.length = from < 0 ? this.length + from : from;
+  return this.push.apply(this, rest);
+};
 
 
+var I = 0;
 
 export class CartList extends React.Component {
 
+    constructor (props) {
+      super(props);
+
+      this.DeleteFromCart = this.DeleteFromCart.bind(this);
+    }
+
+
+    DeleteFromCart(Items, cartP, number) {
+
+
+      cartP.remove(0)
+
+      console.log('Items', Items)
+      console.log('Buttons', Items)
+      I=I+1;
+      var V=I-1;
+
+    }
     render() {
 
 
@@ -24,19 +48,33 @@ export class CartList extends React.Component {
              />
              {this.props.products[parseInt(number, 10) - 1].title}
              {this.props.products[parseInt(number, 10) - 1].subtitle}
+
           </div>
 
        );
+
+       var Buttons = cartP.map((number) =>
+           <div key={number.id}>
+             <button onClick={() => this.DeleteFromCart(Items, cartP, number)}>delete</button>
+           </div>
+
+      );
+
+
 
 
               return (
 
                 <div>
-                  {console.log('Items', Items)}
-                  {console.log('Props.cart', this.props.cart.products)}
+
                   {Items}
+
+                  <div>
+                    {Buttons}
+                  </div>
+
                   £{this.props.cart.total}
-                  <button onClick={this.handleCloseModal}>Close Modal</button>
+
 
                 </div>
               );
