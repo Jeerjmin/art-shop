@@ -41,6 +41,11 @@ export const addToCart = product => ({
     payload: product
 });
 
+export const deleteFromCart = value => ({
+    type: 'DELETE_FROM_CART',
+    payload: value
+});
+
 
 export const addToWishlist = productId => ({
     type: 'ADD_TO_WISHLIST',

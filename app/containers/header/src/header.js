@@ -58,8 +58,13 @@ export class HeaderContainer extends React.Component {
                         overlayClassName="Overlay"
                     >
 
-                    <CartListContainer
-                      />
+
+                  <div>
+
+                    <CartListContainer />
+
+                  </div>
+
 
                   </ReactModal>
 

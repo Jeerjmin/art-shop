@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { ProductsReducer } from './products';
-import { CartReducer } from './cart';
+import { CartReducer} from './cart';
 import { WishlistReducer } from './wishlist';
 import { PaginationReducer } from './pagination';
 import { FilterReducer } from './filter';

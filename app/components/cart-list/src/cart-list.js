@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { bindActionCreators }       from 'redux';
+import { deleteFromCart } from '../../../actions';
 
 Array.prototype.remove = function(from, to) {
   var rest = this.slice((to || from) + 1 || this.length);
@@ -37,28 +39,19 @@ export class CartList extends React.Component {
 
        if (this.props.cart.products != '') {
 
-         var cartP = this.props.cart.products
+         const Title = this.props.cart.cartTitle.map((item,i,arr) =>
+            <div key={i}>
+              {this.props.cart.cartTitle[i]}
+              {this.props.cart.cartSubTitle[i]}
 
+              <img  className="product-cart-image"
+                    src={require("../../../assets/images/"+this.props.cart.cartImage[i])}
+                    alt="Product" itemProp="image"
+              />
 
-         var Items = cartP.map((number) =>
-           <div key={number.id}>
-             <img  className="product-cart-image"
-                   src={require("../../../assets/images/"+this.props.products[parseInt(number, 10) - 1].image)}
-                   alt="Product" itemProp="image"
-             />
-             {this.props.products[parseInt(number, 10) - 1].title}
-             {this.props.products[parseInt(number, 10) - 1].subtitle}
-
-          </div>
-
-       );
-
-       var Buttons = cartP.map((number) =>
-           <div key={number.id}>
-             <button onClick={() => this.DeleteFromCart(Items, cartP, number)}>delete</button>
-           </div>
-
-      );
+            <button value={i} onClick={() => this.props.deleteFromCart(i)}>X</button>
+            </div>
+       )
 
 
 
@@ -67,12 +60,7 @@ export class CartList extends React.Component {
 
                 <div>
 
-                  {Items}
-
-                  <div>
-                    {Buttons}
-                  </div>
-
+                  { Title }
                   £{this.props.cart.total}
 
 
@@ -103,5 +91,11 @@ const mapStateToProps = state => (
     }
 );
 
+const matchDispatchToProps = dispatch => bindActionCreators(
+    {
+        deleteFromCart
+    },
+    dispatch
+);
 
-export const CartListContainer = connect(mapStateToProps)(CartList);
+export const CartListContainer = connect(mapStateToProps,matchDispatchToProps)(CartList);
