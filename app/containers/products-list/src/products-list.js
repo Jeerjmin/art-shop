@@ -4,14 +4,31 @@ import { bindActionCreators }       from 'redux';
 import { connect }                  from 'react-redux';
 
 import configuration                from '../../../config.json';
-import { addToCart, addToWishlist } from '../../../actions';
+import { addToCart, addToWishlist, Ascending, Descending } from '../../../actions';
 import { Product }                  from '../../../components/product';
+
+import DropDownMenu from 'material-ui/DropDownMenu';
+import MenuItem from 'material-ui/MenuItem';
+
 
 import './products-list.scss';
 
 
 class ProductsListContainer extends React.Component {
 
+    constructor(props) {
+      super(props);
+      this.state = {value: 0};
+
+      this.handleChange = this.handleChange.bind(this)
+
+    };
+
+    handleChange(event, index, value) {
+      this.setState({value});
+
+      this.props.Ascending(value)
+    }
 
     isProductInCart(productId, productsInCart) {
         return productsInCart.includes(productId);
@@ -46,9 +63,21 @@ class ProductsListContainer extends React.Component {
 
     render() {
         return (
+          <div>
+          <DropDownMenu value={this.state.value} onChange={this.handleChange} style={{ marginTop: '24px'}} >
+            <MenuItem value={0} primaryText="Сортировать по" />
+            <MenuItem value={1} primaryText="Убыванию цены" />
+            <MenuItem value={2} primaryText="Возростанию цены" />
+
+          </DropDownMenu>
+
+
+
+
             <ul className="product-list">
                 {this.createListOfProducts(this.props.pagination.selectedPage, this.props.products)}
             </ul>
+          </div>
         );
     }
 }
@@ -78,12 +107,6 @@ const mapStateToProps = state => (
               && (product.color.includes(state.colorBrown ))
             )),
 
-        // state.products.filter( function(product) {if (state.color==true) {
-        //                                                        return product.color.includes("red")
-        //                                                        console.log("test",state.color)
-        //                                                      }
-        //                                                    else
-        //                                                        return product}  ),
 
         pagination: state.pagination,
         productsInCart: state.cart.products,
@@ -95,7 +118,9 @@ const mapStateToProps = state => (
 const matchDispatchToProps = dispatch => bindActionCreators(
     {
         addToCart,
-        addToWishlist
+        addToWishlist,
+        Ascending,
+        Descending
     },
     dispatch
 );

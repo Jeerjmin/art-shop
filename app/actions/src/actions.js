@@ -1,3 +1,12 @@
+export const Descending = value => ({
+  type: "SORT_DESCENDING",
+  payload: value
+})
+
+export const Ascending = value => ({
+  type: "SORT_ASCENDING",
+  payload: value
+})
 
 export const FindRed = (value) => ({
   type:"FIND_RED",

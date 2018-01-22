@@ -16,6 +16,34 @@ const style = {
 
 };
 
+var content = [
+  { title: 'Andorra' },
+  { title: 'United Arab Emirates' },
+  { title: 'Afghanistan' },
+  { title: 'Antigua' },
+  { title: 'Anguilla' },
+  { title: 'Albania' },
+  { title: 'Armenia' },
+  { title: 'Netherlands Antilles' },
+  { title: 'Angola' },
+  { title: 'Argentina' },
+  { title: 'American Samoa' },
+  { title: 'Austria' },
+  { title: 'Australia' },
+  { title: 'Aruba' },
+  { title: 'Aland Islands' },
+  { title: 'Azerbaijan' },
+  { title: 'Bosnia' },
+  { title: 'Barbados' },
+  { title: 'Bangladesh' },
+  { title: 'Belgium' },
+  { title: 'Burkina Faso' },
+  { title: 'Bulgaria' },
+  { title: 'Bahrain' },
+  { title: 'Burundi' }
+  // etc
+];
+
 export class SearchContent extends React.Component {
   constructor (props) {
     super(props)
@@ -45,11 +73,13 @@ export class SearchContent extends React.Component {
 
       return(
         <div className="Search">
+          <div>
+            <TextField id="text-field-controlled" value={this.state.value} onChange={this.handleChange}
+            hintText="Search"
+            style={{ marginTop: '30px'}}
+            />
+          </div>
 
-          <TextField id="text-field-controlled" value={this.state.value} onChange={this.handleChange}
-          hintText="Search"
-          style={{ marginTop: '30px'}}
-          />
         </div>
       )
     }

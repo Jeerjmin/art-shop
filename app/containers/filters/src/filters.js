@@ -46,7 +46,7 @@ export class FilterContainer extends React.Component {
 
 
             <DropDownMenu value={this.state.value} onChange={this.handleChange} style={{ marginTop: '24px'}} >
-              <MenuItem value={0} primaryText="Стиль" />
+              <MenuItem value={0} primaryText="Все стили" />
               <MenuItem value={1} primaryText="Абстракция" />
               <MenuItem value={2} primaryText="Импрессионизм" />
               <MenuItem value={3} primaryText="Модерн" />
@@ -58,7 +58,7 @@ export class FilterContainer extends React.Component {
               <MenuItem value={9} primaryText="Реализм" />
               <MenuItem value={10} primaryText="Портрет" />
             </DropDownMenu>
-            <PriceFilter/>
+
           </div>
           <div>
           <ColorFilter />

@@ -42,9 +42,6 @@ export class HeaderContainer extends React.Component {
                 <h1 className="page-title">{this.props.title}</h1>
                 <aside className="header-bag">
                     <div onClick={this.handleOpenModal} className="header-bag__item header-bag__count">
-                        <div className="header-bag__price">
-                            £{this.props.cart.total}
-                        </div>
                         <SVGInline svg={bagIcon} />
                           <span className="bag__item-counter">{this.props.cart.products.length}</span>
                         <span>{console.log(this.props.cart.products)}</span>
