@@ -10,14 +10,17 @@
   "author": "tiagojjoao@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "material-ui": "^0.20.0",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-input-range": "^1.3.0",
     "react-modal": "^3.1.11",
     "react-modal-dialog": "^4.0.7",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
-    "semantic-ui": "^2.2.13"
+    "semantic-ui": "^2.2.13",
+    "semantic-ui-react": "^0.77.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.0.1",
