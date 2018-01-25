@@ -22,29 +22,37 @@
   border-radius: 50%;
 
 }
+
+.buttonf:hover {
+  border: 2px solid black;
+}
 .buttonf1 {
 
-  background: red;
+  background: rgb(200,15,30);
 
+}
+
+.buttonf1::after {
+  background: black;
 }
 
 .buttonf2 {
 
-  background: blue;
+  background: rgb(16,64,198);
 
 }
 .buttonf3 {
 
-  background: #4CAF50;
+  background: rgb(109,200,53);
 
 }
 .buttonf4 {
 
-  background: yellow;
+  background: rgb(255,253,56);
 
 }
 .buttonf5 {
 
-  background: brown;
+  background: rgb(148,75,16);
 
 }

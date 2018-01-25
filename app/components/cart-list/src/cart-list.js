@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators }       from 'redux';
 import { deleteFromCart } from '../../../actions';
 
+import './cart-list.scss'
+
 Array.prototype.remove = function(from, to) {
   var rest = this.slice((to || from) + 1 || this.length);
   this.length = from < 0 ? this.length + from : from;
@@ -40,16 +42,27 @@ export class CartList extends React.Component {
        if (this.props.cart.products != '') {
 
          const Title = this.props.cart.cartTitle.map((item,i,arr) =>
-            <div key={i}>
-              {this.props.cart.cartTitle[i]}
-              {this.props.cart.cartSubTitle[i]}
+            <div className="element-cart" key={i}>
 
               <img  className="product-cart-image"
                     src={require("../../../assets/images/"+this.props.cart.cartImage[i])}
                     alt="Product" itemProp="image"
               />
 
-            <button value={i} onClick={() => this.props.deleteFromCart(i)}>X</button>
+            <div className="text-cart">
+              <p className="cart__tittle">{this.props.cart.cartTitle[i]}</p>
+              <p className="cart__subtitle">{this.props.cart.cartSubTitle[i] + ' '}</p>
+              <p className="cart__price">£ {this.props.cart.cartPrice[i]}</p>
+
+
+
+            <button className="button--in-cart"
+                    value={i}
+                    onClick={() => this.props.deleteFromCart(i)}>
+                    <p>X</p>
+            </button>
+
+          </div>
             </div>
        )
 
@@ -61,8 +74,11 @@ export class CartList extends React.Component {
                 <div>
 
                   { Title }
-                  £{this.props.cart.total}
+                  <p className="total-price">Total: £ {this.props.cart.total} </p>
 
+                    <button className="product__add-to-cart button button--primary button--in-cart">
+                            BUY
+                    </button>
 
                 </div>
               );

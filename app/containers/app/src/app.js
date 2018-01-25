@@ -8,6 +8,7 @@ import { Filters }       from '../../filters'
 import { ProductsList } from '../../products-list';
 import { Pagination }   from '../../pagination';
 import { Footer }       from '../../../components/footer';
+import { HelloPage }    from '../../hello-page';
 import configuration    from '../../../config.json';
 
 
@@ -19,6 +20,7 @@ export class App extends React.Component {
     render() {
         return (
             <div>
+                <HelloPage/>
                 <Header title={configuration.pageTitle}/>
                 <Filters />
 

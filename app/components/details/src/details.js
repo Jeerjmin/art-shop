@@ -46,26 +46,30 @@ export class Details extends React.Component {
                 className="Modal"
                 overlayClassName="Overlay"
             >
-            <div>
 
-              <h1 className="product__title" itemProp="brand">{this.props.product.title}</h1>
-              <p className="product__subtitle" itemProp="description">{this.props.product.subtitle}</p>
-                <ProductPrice
-                    price={this.props.product.price}
-                    priceDiscounted={this.props.product.priceDiscounted}
-                />
 
-              <img className="product-details__image" src={require("../../../assets/images/"+t)} alt="Product" itemProp="image" />
 
-                <AddToCart
-                    product={this.props.product}
-                    onAddToCartClick={this.props.onAddToCartClick}
-                    isProductInCart={this.props.isProductInCart}
-                />
+                      <img className="product-details__image" src={require("../../../assets/images/"+t)} alt="Product" itemProp="image" />
 
-            </div>
+                  <div className="detail-text-container">
+                      <h1 className="product__title" itemProp="brand">{this.props.product.title}</h1>
+                      <p className="product__subtitle" itemProp="description">{this.props.product.subtitle}</p>
 
-                <button onClick={this.handleCloseModal}>Close Modal</button>
+                      <ProductPrice className="product__price"
+                            price={this.props.product.price}
+                            priceDiscounted={this.props.product.priceDiscounted}
+                      />
+                    <AddToCart className="cart-add-button"
+                          product={this.props.product}
+                          onAddToCartClick={this.props.onAddToCartClick}
+                          isProductInCart={this.props.isProductInCart}
+                      />
+                    <button className="product__add-to-cart button button--primary button--in-cart"
+                            onClick={this.handleCloseModal}>
+                            Close Modal
+                    </button>
+                  </div>
+
             </ReactModal>
           </div>
         );

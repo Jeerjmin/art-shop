@@ -10,6 +10,9 @@ import { Product }                  from '../../../components/product';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
+import SVGInline from 'react-svg-inline';
+import sortDown from '../../../assets/svg/sort-down.svg';
+import sortUp from '../../../assets/svg/sort-up.svg';
 
 import './products-list.scss';
 
@@ -18,9 +21,16 @@ class ProductsListContainer extends React.Component {
 
     constructor(props) {
       super(props);
-      this.state = {value: 0};
+      this.state = {
+        value: 0,
+        valuePrice: 0,
+        active1: '',
+
+      };
+
 
       this.handleChange = this.handleChange.bind(this)
+      this.handlePrice = this.handlePrice.bind(this)
 
     };
 
@@ -60,16 +70,41 @@ class ProductsListContainer extends React.Component {
             ));
     }
 
+    handlePrice() {
+
+      if (this.state.valuePrice == 0) {
+        this.setState({valuePrice: 1, active1: sortDown });
+        this.props.Ascending(1)
+      }
+      if (this.state.valuePrice == 1) {
+        this.setState({valuePrice: 2, active1: sortUp })
+        this.props.Ascending(2)
+      }
+      if (this.state.valuePrice == 2) {
+        this.setState({valuePrice: 1, active1: sortDown})
+        this.props.Ascending(1)
+      }
+
+
+      console.log('valuePrice', this.state.valuePrice)
+    }
+
 
     render() {
+
+
         return (
           <div>
-          <DropDownMenu value={this.state.value} onChange={this.handleChange} style={{ marginTop: '24px'}} >
-            <MenuItem value={0} primaryText="Сортировать по" />
-            <MenuItem value={1} primaryText="Убыванию цены" />
-            <MenuItem value={2} primaryText="Возростанию цены" />
+            <div onClick={this.handlePrice} className="sort__content">
+              <h3>{this.props.products.length} PRODUCTS</h3>
+              &nbsp;  &nbsp; &nbsp;  &nbsp;
+              <p>by price</p>
+              &nbsp;  &nbsp;
+              <div className="sort__arrows">
+              <SVGInline className="sort__arrow"  svg={this.state.active1} />
+              </div>
+            </div>
 
-          </DropDownMenu>
 
 
 

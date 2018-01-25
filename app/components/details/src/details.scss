@@ -5,9 +5,13 @@
   bottom: 15%;
   left: 10%;
   right: 5%;
-  width: 80%;
+  width: 85%;
   height: 70%;
-    background-color: rgba(115,115,115,0.95);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+    background-color: rgba(240,240,241,0.95);
 }
 
 .Overlay {
@@ -20,6 +24,51 @@
 }
 
 .product-details__image {
-  width: 500px;
-  height: 500px;
+
+height: 500px;
+align-self: center;
+}
+
+.detail-text-container {
+}
+
+.cart-add-button {
+  width: 200px;
+}
+
+
+.product__title {
+  text-align: center;
+}
+
+.product__subtitle {
+  text-align: center;
+}
+
+.product__price {
+  text-align: center;
+}
+
+@media (max-width: 1200px)  {
+
+  .product-details__image {
+    height: 400px;
+  }
+
+}
+
+@media (max-width: 1000px)  {
+
+  .product-details__image {
+    height: 350px;
+  }
+
+}
+
+@media (max-width: 900px)  {
+
+  .product-details__image {
+    height: 300px;
+  }
+
 }

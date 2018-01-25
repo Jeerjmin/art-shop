@@ -1,8 +1,13 @@
+
+@import '../../../assets/colors/colors.scss';
+
+
 .product-list {
     display: flex;
     flex: 0 1 auto;
     flex-flow: row wrap;
-    margin: 0 -10px;
+    margin: 0 0px;
+        background-color: $body-bg-color;
 
     &__item {
         padding: 10px;
@@ -12,4 +17,25 @@
 
         margin: auto;
     }
+}
+
+.sort__content {
+display: flex;
+flex-direction: row;
+align-items: baseline;
+}
+
+.sort__content p {
+  font-size: 17px;
+  text-decoration: underline;
+}
+
+
+.sort__arrows {
+align-self: flex-start;
+}
+
+.sort__arrow > svg {
+  width: 25px;
+  height: 25px;
 }

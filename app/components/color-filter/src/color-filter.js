@@ -42,9 +42,10 @@ export class ColorFilterContainer extends React.Component {
 
   handleClick1(e) {
 
-    if (e.target.value== '') {
+    if (this.state.activeB1== '') {
       this.setState({activeB1:'2px solid black'})
       this.state.value1='red'
+
     }
     else {
       this.setState({activeB1:''})
@@ -53,12 +54,15 @@ export class ColorFilterContainer extends React.Component {
 
     this.props.FindRed(this.state.value1)
 
+
+
   }
   handleClick2(e) {
 
-    if (e.target.value== '') {
+    if (this.state.activeB2== '') {
       this.setState({activeB2:'2px solid black'})
       this.state.value2='blue'
+
     }
     else {
       this.setState({activeB2:''})
@@ -66,6 +70,8 @@ export class ColorFilterContainer extends React.Component {
     }
 
     this.props.FindBlue(this.state.value2)
+
+
 
   }
   handleClick3(e) {
@@ -124,7 +130,7 @@ export class ColorFilterContainer extends React.Component {
 
       return(
         <div className="col-fil">
-          <h5>Выберите цвета в картине</h5>
+          <h5>Color: </h5>
           <div>
             <button className="buttonf buttonf1" value={this.state.value1} onClick={this.handleClick1} style={style1}>   </button>
             <button className="buttonf buttonf2" value={this.state.value2} onClick={this.handleClick2} style={style2}>   </button>

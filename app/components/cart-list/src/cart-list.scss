@@ -1,0 +1,80 @@
+@import '../../../assets/colors/colors.scss';
+
+@font-face{
+    font-family: 'Lato-Bold';
+    src: url('../../../assets/font/Lato-Bold.ttf') format('ttf');
+}
+
+@font-face{
+    font-family: 'Lato-BoldItalic';
+    src: url('../../../assets/font/Lato-BoldItalic.ttf') format('ttf');
+}
+
+@font-face{
+    font-family: 'Lato-Italic';
+    src: url('../../../assets/font/Lato-Italic.ttf') format('ttf');
+}
+
+@font-face{
+    font-family: 'Lato-Regular';
+    src: url('../../../assets/font/Lato-Regular.ttf') format('ttf');
+}
+
+.element-cart {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  background: rgb(248,248,248);
+}
+
+.text-cart {
+  margin-left: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+p {
+  color: $body-fg-color;
+  text-align: center;
+
+}
+
+.cart__tittle {
+  font-family: 'Lato-Bold', sans-serif;
+  text-transform: uppercase;
+}
+
+.cart__subtitle {
+  color: #808080;
+  font-family: 'Lato-Regular', sans-serif;
+}
+
+
+.cart__price {
+  font-family: 'Lato-Bold', sans-serif
+}
+
+.button--in-cart {
+  width: 25px;
+}
+
+.button--in-cart:hover {
+  background-color: #444A59;
+}
+
+
+.button--in-cart > p {
+  color:red;
+}
+
+.total-price {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500px;
+}
+
+.button--in-cart {
+  text-align: center;
+}

@@ -8,7 +8,7 @@ import ReactModal from 'react-modal';
 import SVGInline from 'react-svg-inline';
 import bagIcon from '../../../assets/svg/bag.svg';
 import wishlistIcon from '../../../assets/svg/wishlist.svg';
-
+import logo2 from '../../../assets/svg/logo2.svg';
 import {CartListContainer} from '../../../components/cart-list'
 
 
@@ -39,19 +39,19 @@ export class HeaderContainer extends React.Component {
     render() {
         return (
             <header className="header container">
-                <h1 className="page-title">{this.props.title}</h1>
+                <SVGInline className="page-title" svg={logo2} />
+
                 <aside className="header-bag">
                     <div onClick={this.handleOpenModal} className="header-bag__item header-bag__count">
                         <SVGInline svg={bagIcon} />
                           <span className="bag__item-counter">{this.props.cart.products.length}</span>
-                        <span>{console.log(this.props.cart.products)}</span>
                     </div>
 
                     <ReactModal
                         isOpen={this.state.showModal}
                         contentLabel="Minimal Modal Example"
                         onRequestClose={this.handleCloseModal}
-                        className="Modal"
+                        className="Modal-Header"
                         overlayClassName="Overlay"
                     >
 
