@@ -1,13 +1,9 @@
 {
-  "name": "online-store",
+  "name": "Art-store",
   "version": "1.0.0",
-  "description": "shopping cart",
+  "description": "Art store",
   "main": "app",
-  "repository": {
-    "url": "ssh://git@bitbucket.org/tiagojoao/js_challenge_tiago-inacio.git",
-    "type": "git"
-  },
-  "author": "tiagojjoao@gmail.com",
+  "author": "Jeerjmin@gmail.com",
   "license": "MIT",
   "dependencies": {
     "material-ui": "^0.20.0",
